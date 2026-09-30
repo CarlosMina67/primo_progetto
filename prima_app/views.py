@@ -3,6 +3,8 @@ from django.shortcuts import render
 def homepage(request):
     return render(request, "prima_app/homepage.html")
 
+def index(request):
+    return render(request, "prima_app/index.html")
 
 def welcome(request):
     return render(request, "prima_app/welcome.html")
