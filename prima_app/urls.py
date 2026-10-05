@@ -7,6 +7,6 @@ urlpatterns = [
     path('welcome', welcome, name='welcome' ),
     path('lista', lista, name='lista'),
     path('chi_siamo', chi_siamo, name='chi_siamo'),
-    path('', index, name='index'),
+    path('index', index, name='index'),
     path('variabili', variabili, name='variabili')
 ]
