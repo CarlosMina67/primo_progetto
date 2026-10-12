@@ -20,6 +20,7 @@ from primo_progetto.views import index_root
 
 urlpatterns = [
     path('', include("prima_app.urls", namespace="prima_app")),
+    path('', include("seconda_app.urls", namespace="seconda_app")),
     path('admin/', admin.site.urls),
     path('', index_root, name="index_root"),
 
