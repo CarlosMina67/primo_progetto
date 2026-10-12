@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block title %}{{ block.super }} | Index Root{% endblock title %}
+
+{% block content %}
     <a href="/admin">Pannello admin</a>
     <br>
-    <a href="{% url 'prima_app:index'%}">indice</a>
-</body>
-</html>
+    <a href="{% url 'prima_app:index' %}">indice</a>
+{% endblock content %}
