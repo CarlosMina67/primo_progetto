@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>massimo</title>
+    <style>
+        .verde { color: green; font-weight: bold;}
+        .nero {color: black;}
+    </style>
+</head>
+<body>
+    <p>
+        primo numero:
+        <span class="{% if n1 == massimo %} verde {% else %} nero {% endif %}">{{n1}}</span>></span>
+    </p>
+    <p>
+         secondo numero:
+        <span class="{% if n2 == massimo %} verde {% else %} nero {% endif %}">{{n1}}</span>></span>        
+    </p>
+        terzo numero:
+        <span class="{% if n3 == massimo %} verde {% else %} nero {% endif %}">{{n1}}</span>></span>
+</body>
+</html>
