@@ -1,8 +1,8 @@
+'''
 from django.http import HttpResponse
 from .models import Articolo, Giornalista
 from django.shortcuts import render
 
-'''
 
  2 VERSIONE (Concatenazione di stringhe)
  def home(request):
@@ -36,7 +36,6 @@ from django.shortcuts import render
      print(response)
  
      return HttpResponse("<h1>" + response + "</h1>")
-'''
 
 # 4 VERSIONE (Utilizzo dei Template HTML e della funzione render)
 def home(request):
@@ -45,3 +44,14 @@ def home(request):
     context = {"articoli": articoli, "giornalisti": giornalisti}
     print(context)
     return render(request, "homepage.html", context)
+'''
+
+from django.urls import path
+from .views import home, articoloDetailView
+
+app_name = "news"
+
+urlpatterns = [
+    path("", home, name="homeview"),
+    path("articoli/<int:pk>", articoloDetailView, name="articolo_detail")
+]

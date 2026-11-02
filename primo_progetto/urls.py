@@ -22,7 +22,7 @@ urlpatterns = [
     path('', include("prima_app.urls", namespace="prima_app")),
     path('', include("seconda_app.urls", namespace="seconda_app")),
     path('admin/', admin.site.urls),
+    path('news/', include("news.urls", namespace="news")),
     path('', index_root, name="index_root"),
-    path('', include("news.urls", namespace="news")),
 
 ]
