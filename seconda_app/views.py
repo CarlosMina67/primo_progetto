@@ -12,7 +12,7 @@ def es_if_elif_else(request):
         'var2': 200,
         'var3': 300
     }
-    return render(request, "es_if_elif_else.html", dic)
+    return render(request, "if_else_elif.html", dic)
 
 def es_for(request):
     dic = {

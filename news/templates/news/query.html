@@ -1,0 +1,187 @@
+{% extends 'base.html' %}
+
+{% block title %}Query Base{% endblock %}
+
+{% block content %}
+    <h1>Query di base</h1>
+
+    <section class="mb-4">
+        <h2>1. Tutti gli articoli scritti da giornalisti di un certo cognome</h2>
+        <p>Incolla qui il risultato della query 1.</p>
+        <ul>
+            {% for item in articoli_cognome %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 1</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>2. Totale articoli</h2>
+        <p>Incolla qui il risultato della query 2.</p>
+        <ul>
+            {% for item in numero_totale_articoli %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 2</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>3. Conteggio articoli di un giornalista specifico</h2>
+        <p>Incolla qui il risultato della query 3.</p>
+        <ul>
+            {% for item in numero_articoli_giornalista %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 3</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>4. Articoli ordinati per numero di visualizzazioni decrescente</h2>
+        <p>Incolla qui il risultato della query 4.</p>
+        <ul>
+            {% for item in articoli_ordinati %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 4</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>5. Articoli senza visualizzazioni</h2>
+        <p>Incolla qui il risultato della query 5.</p>
+        <ul>
+            {% for item in articoli_senza_visualizzazioni %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 5</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>6. Articolo più visualizzato</h2>
+        <p>Incolla qui il risultato della query 6.</p>
+        <ul>
+            {% for item in articolo_piu_visualizzato %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 6</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>7. Giornalisti nati dopo una certa data</h2>
+        <p>Incolla qui il risultato della query 7.</p>
+        <ul>
+            {% for item in giornalisti_data %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 7</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>8. Articoli pubblicati in una data specifica</h2>
+        <p>Incolla qui il risultato della query 8.</p>
+        <ul>
+            {% for item in articoli_del_giorno %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 8</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>9. Articoli pubblicati in un intervallo di date</h2>
+        <p>Incolla qui il risultato della query 9.</p>
+        <ul>
+            {% for item in articoli_periodo %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 9</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>10. Giornalisti nati prima del 1980</h2>
+        <p>Incolla qui il risultato della query 10.</p>
+        <ul>
+            {% for item in giornalisti_nati %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 10</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>11. Il giornalista più giovane</h2>
+        <p>Incolla qui il risultato della query 11.</p>
+        <ul>
+            {% for item in giornalista_giovane %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 11</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>12. Il giornalista più anziano</h2>
+        <p>Incolla qui il risultato della query 12.</p>
+        <ul>
+            {% for item in giornalista_anziano %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 12</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>13. Gli ultimi 5 articoli pubblicati</h2>
+        <p>Incolla qui il risultato della query 13.</p>
+        <ul>
+            {% for item in ultimi_5 %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 13</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>14. Articoli con un numero minimo di visualizzazioni</h2>
+        <p>Incolla qui il risultato della query 14.</p>
+        <ul>
+            {% for item in articoli_minime_visualizzazioni %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 14</li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="mb-4">
+        <h2>15. Articoli che contengono una certa parola nel titolo</h2>
+        <p>Incolla qui il risultato della query 15.</p>
+        <ul>
+            {% for item in articoli_parola %}
+                <li>{{ item }}</li>
+            {% empty %}
+                <li>Nessun risultato per la Query 15</li>
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}

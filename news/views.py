@@ -41,3 +41,24 @@ def listaArticoli(request, pk=None):
         "titolo": titolo,
     }
     return render(request, "lista_articoli.html", context)
+
+
+def queryBase(request):
+    context = {
+        "articoli_cognome": [],
+        "numero_totale_articoli": [],
+        "numero_articoli_giornalista": [],
+        "articoli_ordinati": [],
+        "articoli_senza_visualizzazioni": [],
+        "articolo_piu_visualizzato": [],
+        "giornalisti_data": [],
+        "articoli_del_giorno": [],
+        "articoli_periodo": [],
+        "giornalisti_nati": [],
+        "giornalista_giovane": [],
+        "giornalista_anziano": [],
+        "ultimi_5": [],
+        "articoli_minime_visualizzazioni": [],
+        "articoli_parola": [],
+    }
+    return render(request, "news/query.html", context)

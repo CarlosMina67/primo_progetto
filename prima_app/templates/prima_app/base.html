@@ -46,8 +46,6 @@
               <a class="dropdown-item" href="{% url 'seconda_app:es_if' %}">esempio if</a>
               <a class="dropdown-item" href="{% url 'seconda_app:if_else_elif' %}">if else elif</a>
               <a class="dropdown-item" href="{% url 'seconda_app:es_for' %}">esempio for</a>
-              <a class="dropdown-item" href="#">place holder</a>
-              <a class="dropdown-item" href="#">place holder</a>
             </div>
           </li>
           <!-- Dropdown: terza app -->
@@ -71,6 +69,7 @@
             <div class="dropdown-menu" aria-labelledby="navbarDropdownnewsApp">
               <a class="dropdown-item" href="{% url 'news:homeview' %}">Home News</a>
               <a class="dropdown-item" href="{% url 'news:articolo_detail' 1 %}">Dettaglio Articolo (ID 1)</a>
+              <a class="dropdown-item" href="{% url 'news:query_base' %}">Query Base</a>
             </div>
           </li>
 
