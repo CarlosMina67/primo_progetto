@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titolo }}</title>
+</head>
+<body>
+    {% if mostra_giornalista and giornalista %}
+        <h1>Articoli di {{ giornalista.nome }} {{ giornalista.cognome }}</h1>
+    {% else %}
+        <h1>Tutti gli Articoli:</h1>
+    {% endif %}
+
+    {% if articoli %}
+        {% for articolo in articoli %}
+            <p><strong>Titolo:</strong> {{ articolo.titolo }}</p>
+            <p><strong>Contenuto:</strong> {{ articolo.contenuto }}</p>
+            {% if mostra_giornalista %}
+                <p><strong>Autore:</strong> {{ articolo.giornalista }}</p>
+            {% else %}
+                <p><strong>Autore:</strong> {{ articolo.giornalista }}</p>
+            {% endif %}
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>Non ci sono articoli disponibili.</p>
+    {% endif %}
+</body>
+</html>
